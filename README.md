@@ -1,5 +1,5 @@
 # ☒CHIP SU01
-<img src="extras/SU01 V0.5.0.JPG" width="300" align="right">
+<img src="extras/SU01 V0.5.0.JPG" width="35%" height="auto" align="right">
 Sensor Module based on the ADC081C021 Analog to Digital converter.
 
 This module can be purchased on [Xinabox CC](https://xinabox.cc/products/SU01/).
