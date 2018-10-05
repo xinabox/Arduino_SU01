@@ -28,7 +28,7 @@ void setup() {
   Wire.setClockStretchLimit(15000);
 #endif
 
-  // Start the  SU02 Sensor
+  // Start the  SU01 Sensor
   SU01.begin();
 }
 
