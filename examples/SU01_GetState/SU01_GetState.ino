@@ -20,6 +20,8 @@ void setup() {
   // Start the Serial Monitor
   Serial.begin(115200);
 
+  Wire.begin();
+
   // Set the I2C Pins for CW01
 #ifdef ESP8266
   Wire.pins(2, 14);
