@@ -38,13 +38,14 @@ xSU01::xSU01(uint8_t _addr){
 */
 bool xSU01::begin(void){
 	xCore.write8(SU01_I2C_ADDR, ADC_REG_CONF, ADC_CONF_CYC_TIME_256); 
-	uint8_t conf = xCore.read8(SU02_I2C_ADDR, ADC_REG_CONF);
+	uint8_t conf = xCore.read8(SU01_I2C_ADDR, ADC_REG_CONF);
 
 	if(conf != ADC_CONF_CYC_TIME_256)
 	{
 		return false;
 	}
-	return true;}
+	return true;
+}
 
 /*!
 	@brief 	Request Read to be done from ADC081C021
