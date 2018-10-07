@@ -13,7 +13,7 @@
 	ADC081C021 - http://www.ti.com/lit/ds/symlink/adc081c021.pdf
 */
 
-#include <xSU01.h>
+#include <Arduino_SU01.h>
 #include <math.h>
 
 /*-----------------Public Class Function----------------*/
@@ -21,7 +21,8 @@
 /*!
 	@brief 	Instantiates a new xSU01 Class 
 */
-xSU01::xSU01(){
+xSU01::xSU01()
+{
 	SU01_I2C_ADDR = 0x55;
 }
 
@@ -29,14 +30,16 @@ xSU01::xSU01(){
 	@brief 	Instantiates a new xSU01 Class 
 	@param	_addr	Alternate I2C Address of Device
 */
-xSU01::xSU01(uint8_t _addr){
+xSU01::xSU01(uint8_t _addr)
+{
 	SU01_I2C_ADDR = _addr;
 }
 
 /*!
 	@brief 	Initilize ADC081C021
 */
-bool xSU01::begin(void){
+bool xSU01::begin(void)
+{
 	xCore.write8(SU01_I2C_ADDR, ADC_REG_CONF, ADC_CONF_CYC_TIME_256); 
 	uint8_t conf = xCore.read8(SU01_I2C_ADDR, ADC_REG_CONF);
 
@@ -50,7 +53,8 @@ bool xSU01::begin(void){
 /*!
 	@brief 	Request Read to be done from ADC081C021
 */
-void xSU01::poll(void){
+void xSU01::poll(void)
+{
 	readVoltage();
 }
 
@@ -58,7 +62,8 @@ void xSU01::poll(void){
 	@brief 	Initilize ADC081C021
 	@ret	boolean state
 */
-bool xSU01::getState(void){
+bool xSU01::getState(void)
+{
 	return state;
 }
 
@@ -67,7 +72,8 @@ bool xSU01::getState(void){
 /*!
 	@brief 	Read ADC Voltage from ADC081C021
 */
-void xSU01::readVoltage(void){
+void xSU01::readVoltage(void)
+{
 	uint8_t a,b;
 	uint16_t data;
 	float voltage;
@@ -79,9 +85,11 @@ void xSU01::readVoltage(void){
 	
 	voltage = (((((a & 0x0F)*256) + (b & 0xF0))/0x10)*(3.3/256));
 
-	if(voltage > HIGH_STATE){
+	if(voltage > HIGH_STATE)
+	{
 		state = true;
-	} else if(voltage < LOW_STATE){
+	} else if(voltage < LOW_STATE)
+	{
 		state = false;
 	}
 }
