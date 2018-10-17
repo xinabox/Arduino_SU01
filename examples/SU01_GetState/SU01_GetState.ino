@@ -12,7 +12,7 @@
 *************************************************************/
 
 #include <xCore.h>
-#include <arduino-SU01.h>
+#include <xSU01.h>
 
 xSU01 SU01;
 

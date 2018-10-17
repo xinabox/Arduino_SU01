@@ -13,8 +13,8 @@
 	ADC081C021 - http://www.ti.com/lit/ds/symlink/adc081c021.pdf
 */
 
-#ifndef arduino-SU01_h
-#define arduino-SU01_h
+#ifndef xSU01_h
+#define xSU01_h
 
 // System Include
 #include <inttypes.h>
