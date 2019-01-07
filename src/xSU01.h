@@ -44,8 +44,13 @@
 #define ADC_CONF_ALERT_MAN		0x01
 #define ADC_CONF_FLAG_EN		0x08
 
-#define HIGH_STATE				3.0
-#define LOW_STATE				1.0
+#ifndef HIGH_STATE
+	#define HIGH_STATE	1.0
+#endif
+
+#ifndef LOW_STATE
+	#define LOW_STATE 	0.5
+#endif
 
 class xSU01: public xCoreClass
 {
