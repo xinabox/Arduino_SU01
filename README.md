@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/xinabox/arduino-SU01.svg?branch=master)](https://travis-ci.org/xinabox/arduino-SU01)
+[![GitHub issues](https://img.shields.io/github/issues/xinabox/arduino-SU01.svg)](https://github.com/xinabox/arduino-SU01/issues)
+
 # ☒CHIP SU01
 <img src="extras/SU01 V0.5.0.JPG" width="35%" height="auto" align="right">
 Sensor Module based on the ADC081C021 Analog to Digital converter.
